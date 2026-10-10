@@ -540,12 +540,8 @@ Detailed documentation files located in the [`docs/`](docs/) directory:
 ### Contributing
 Contributions to improve accessibility, broaden test coverage, or add regional language translations are welcome. Please open an issue before submitting pull requests.
 
-### Licence
-This project is currently distributed under the terms of:  
-`[LICENCE - e.g. MIT Licence / Apache 2.0]` *(Please add a LICENSE file to the repository root)*.
-
 ### Project Team & Contact
-- **Project Lead / Developer:** `[YOUR NAME]`
-- **Email:** `[YOUR EMAIL]`
+- **Project Lead / Developer:** `HET BHALANI /JAINAM GAJJAR`
+- **Email:** `HETKIKANI880@GMAIL.COM`
 - **Institution / Team:** Smart India Hackathon 2023 Team
 - **GitHub Repository:** [https://github.com/Hetk8406/Udyog-Saarthi-SIH-23](https://github.com/Hetk8406/Udyog-Saarthi-SIH-23)
