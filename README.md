@@ -38,18 +38,18 @@
 ## About the Project
 
 ### The Problem
-Finding meaningful employment remains an uphill struggle for Persons with Disabilities (PwD) across India, particularly individuals with neurodivergent conditions, intellectual disabilities, autism spectrum disorders, mental illness, or multiple disabilities. Government and Public Sector Undertaking (PSU) job notifications are often dense, multi-page PDFs with complex legalistic language, obscure reservation breakdowns (such as the 4% reservation under Section 34 of the RPwD Act 2016), and inaccessible application gateways. Furthermore, candidates often lack preparatory support with compensatory examination accommodations or structured guidance from dedicated job coaches.
+Finding meaningful employment remains an uphill struggle for Persons with Disabilities (PwD) across India, particularly individuals with neurodivergent conditions, intellectual disabilities, autism spectrum disorders, mental illness, or multiple disabilities. Government and Public Sector Undertaking (PSU) job notifications are often dense, multi-page PDFs with difficult language, obscure reservation breakdowns (such as the 4% reservation under Section 34 of the RPwD Act 2016), and inaccessible application gateways. Furthermore, candidates rarely receive reasonable accommodations during preparatory examinations or structured guidance from specialized job coaches.
 
 ### Who It Is For
-- **Candidates with Disabilities:** Job seekers across disability categories recognized under the RPwD Act 2016, with accessibility accommodations for locomotor, visual, hearing, intellectual, and neurodivergent conditions.
+- **Candidates with Disabilities:** Job seekers across disability categories recognized under the RPwD Act 2016, with accommodations for locomotor, visual, hearing, intellectual, and neurodivergent conditions.
 - **Parents and Guardians:** Authorized family members who can review opportunities, manage documents, and follow up on applications with explicit candidate consent.
 - **Job Coaches & Counsellors:** Vocational experts who review candidate barriers, formulate personalized guidance notes, and suggest suitable openings.
-- **Administrators:** Platform staff who manage job postings, review applications, oversee coach assignments, and monitor platform metrics.
+- **System Administrators:** Staff members who manage vacancies, oversee user roles, and monitor platform health and application metrics.
 
 ### What It Does
-Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme & Job Support Services)**, Udyog Saarthi provides an end-to-end accessible career ecosystem:
-1. Translates intricate job notices into plain, accessible summaries.
-2. Identifies matching vacancies based on disability reservation quotas and personal functional profiles.
+Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme & Job Support Services)**, Udyog Saarthi provides an accessible career support platform:
+1. Translates intricate job notices into simplified, accessible summaries.
+2. Identifies matching vacancies based on disability reservation categories and candidate functional profiles.
 3. Provides mock tests with compensatory time accommodations.
 4. Connects candidates with assigned coaches and supports authorized guardian delegation.
 
@@ -60,24 +60,24 @@ Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme 
 ```
 ┌─────────────────┐     ┌──────────────────────┐     ┌────────────────────────┐
 │  1. Onboarding  │ ──> │ 2. Profile & Needs   │ ──> │ 3. Job Discovery       │
-│ Register & review     │ Complete functional  │     │ Search 4% reservations │
-│ privacy notice  │     │ Washington Group Qs  │     │ & private openings     │
+│ Register & consent    │ Complete functional  │     │ Search 4% reservations │
+│ to DPDP notice  │     │ Washington Group Qs  │     │ & private openings     │
 └─────────────────┘     └──────────────────────┘     └────────────────────────┘
                                                                   │
                                                                   ▼
 ┌─────────────────┐     ┌──────────────────────┐     ┌────────────────────────┐
 │ 6. Placed!      │ <── │ 5. Learn & Prepare   │ <── │ 4. Apply & Track       │
 │ Onboarding &    │     │ Take compensatory    │     │ Upload documents &     │
-│ coach support   │     │ mock tests & courses │     │ track status timeline  │
+│ coach follow-up │     │ mock tests & courses │     │ track status timeline  │
 └─────────────────┘     └──────────────────────┘     └────────────────────────┘
 ```
 
-1. **"I want a job":** Candidate signs up securely, reviews the privacy and consent notice, and logs in.
-2. **Build an Accommodation Profile:** Candidate documents their qualifications, functional needs using the Washington Group Extended Set questions, assistive devices, and exam requirements (e.g., scribe, extra time).
+1. **"I want a job":** Candidate signs up securely, reviews the DPDP-oriented consent notice, and logs in.
+2. **Build an Accommodation Profile:** Candidate documents their qualifications, functional difficulties using the Washington Group Extended Set questions, assistive devices, and exam requirements (e.g., scribe, extra time).
 3. **Discover Verified Jobs:** Portal filters vacancies across Central/State Government, PSUs, and private equal-opportunity employers by specific reservation categories.
 4. **Apply & Upload Documents:** Candidate attaches their resume and certificates using private storage with signed download URLs.
 5. **Practice with Accommodations:** Candidate takes accessible mock exams with automatic compensatory time (+20 minutes/hour) or untimed modes, reviewing detailed answer explanations.
-6. **Coaching & Placement:** Assigned job coaches provide guidance through support tickets, track application stages, and support candidates through examination and placement.
+6. **Coaching & Placement:** Assigned job coaches provide guidance through support tickets, track application stages, and support candidate placement.
 
 ---
 
@@ -92,25 +92,25 @@ Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme 
 
 ### Job Discovery & Reservation Matching
 - **Sector Filtering:** Search government vacancies, PSUs, and private inclusive employers by location, salary, experience, and specific disability quota.
-- **Plain-Language Explanations:** Explains eligibility terms, qualification requirements, and physical suitability standards.
+- **Simplified Explanations:** Explains legal eligibility terms, medical requirements, and physical suitability standards.
 
 ### Application Tracking & Timelines
-- **Status Timeline:** Tracks applications through real pipeline stages: *Saved*, *Application Started*, *Applied*, *Application Submitted*, *Admit Card Released*, *Exam Scheduled*, *Exam Attended*, *Result Published*, *Interview Scheduled*, *Interview Attended*, *Selected*, *Placed* (with terminal states: *Rejected*, *Withdrawn*, *Expired*).
-- **External Redirect Support:** Tracks applications submitted through external official recruitment portals (e.g., UPSC, SSC, state PSCs) alongside internal applications.
+- **Detailed Status Timeline:** Tracks applications through real pipeline stages: *Saved*, *Application Started*, *Applied*, *Application Submitted*, *Admit Card Released*, *Exam Scheduled*, *Exam Attended*, *Result Published*, *Interview Scheduled*, *Interview Attended*, *Selected*, *Placed*, as well as terminal states *Rejected*, *Withdrawn*, and *Expired*.
+- **External Redirect Support:** Tracks applications submitted through external government portals (e.g., UPSC, SSC, state PSCs) alongside internal applications.
 
 ### Secure Document Vault
-- **Private File Storage:** Accepts resumes and educational certificates (PDF, DOCX, PNG, JPG) up to 5 MB with strict magic-byte validation.
+- **Private File Storage:** Accepts resumes, certificates, and supporting documents (PDF, DOCX, PNG, JPG) up to 5 MB with file magic-byte validation.
 - **Expiring Signed URLs:** Documents are stored under random UUID keys and downloaded only via 5-minute signed URLs after permission checks.
 
 ### Accessible Learning & Mock Test Engine
-- **Compensatory Time Allocations:** Supports +20 minutes extra per hour compensatory timing, alongside 1.5x and untimed practice modes.
-- **Curated Course Library:** Career preparation modules, digital literacy courses, and interview preparation materials.
+- **Compensatory Time Allocations:** Supports standard, compensatory (+20 min/hour), relaxed (1.5x), and untimed practice modes.
+- **Curated Course Library:** Open-access career preparation modules, computer skills courses, and interview preparation materials.
 
 ### Notification Center
 - **In-App & Email Alerts:** Status changes, coach responses, ticket updates, and exam deadlines appear in the notification drawer and deliver via background tasks.
 
 ### Support Desk & Job Coach Workspace
-- **Confidential Ticket System:** Two-way messaging between candidates and coaches for technical assistance, career counselling, and interview guidance.
+- **Confidential Ticket System:** Two-way messaging between candidates and coaches for technical assistance, career counselling, and interview scheduling.
 - **Coach Notes:** Coaches can attach private observations and recommended jobs to candidate records.
 
 ### Guardian Delegation
@@ -120,12 +120,12 @@ Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme 
 - **Platform Governance:** Comprehensive metrics, job posting creation, vacancy review, user role management, and audit logging.
 
 ### Explainable AI Helpers (Gemini & Heuristic Engine)
-- **Job Explainer:** Summarizes complex recruitment notices into clear, plain language, highlighting core duties, physical suitability, and key deadlines.
+- **Job Explainer:** Summarizes complex recruitment notices into clear plain language, highlighting duties, physical suitability, and key deadlines.
 - **Smart Recommendations:** Suggests relevant openings and skill-building courses based on self-reported accommodations without sharing personal data with AI vendors.
 
 ### SEO, Cookie Consent & Compliance
 - **Zero-PII Analytics:** Plausible analytics integration (cookieless and privacy-first).
-- **Compliance Center:** Draft legal notices designed with the DPDP Act 2023 in mind, Terms of Service, and an interactive cookie preferences manager.
+- **Compliance Center:** Draft legal notices for DPDP Act 2023, Terms of Service, and an interactive cookie preferences manager.
 
 ---
 
@@ -135,7 +135,7 @@ Accessibility is built directly into every page rather than added as an aftertho
 
 | Feature | Implementation Detail |
 | :--- | :--- |
-| **Accessibility Bar** | Persistent toolbar offering font scaling (100% to 130%), pure high contrast (black background `#000` with yellow text `#FFFF00`), and reduced motion. |
+| **Accessibility Bar** | Persistent toolbar offering font scaling (100% to 130%), high contrast (black background `#000` with yellow text `#FFFF00`), and reduced motion. |
 | **Skip-to-Content Link** | The first keyboard tab stop bypasses navigation bars and jumps directly to `<main id="main-content">`. |
 | **Keyboard Navigation** | Visible 3px focus rings on all interactive elements; tab focus traps inside modals with <kbd>Escape</kbd> restoration. |
 | **Touch Targets** | All buttons, links, and form inputs meet minimum touch targets of 44×44 pixels. |
@@ -152,13 +152,13 @@ Accessibility is built directly into every page rather than added as an aftertho
 Security and privacy practices are designed with the Digital Personal Data Protection (DPDP) Act 2023 in mind:
 
 - **HttpOnly Cookie Authentication:** JWT tokens are stored exclusively in HttpOnly, SameSite cookies (`access_token` and `refresh_token`), protecting against token theft via XSS.
-- **CSRF Defense:** `django-cors-headers` combined with double-submit CSRF cookie checks (`csrftoken` header) on all state-changing endpoints.
+- **CSRF Defense:** `django-cors-headers` combined with double-submit CSRF cookie checks (`csrftoken` header) on state-changing endpoints.
 - **UDID Data Protection:** Disability certificate numbers (UDID) are treated as sensitive data. They are never transmitted to third parties, AI APIs, or unassigned accounts.
 - **Rate Limiting:** Authentication, login, password reset, and upload endpoints enforce throttling (e.g., 5 requests/minute for login) to mitigate credential stuffing and DoS attacks.
-- **Cloudflare Turnstile:** Bot and credential-stuffing defense on login and registration pages; fails closed in production (`DEBUG=False`).
+- **Cloudflare Turnstile:** Bot defense on login and registration pages; fails closed in production (`DEBUG=False`).
 - **File Upload Validation:** Files are checked against allowed extensions, maximum file sizes (5 MB), and verified binary magic bytes (`%PDF-`, `PK\x03\x04`, `\xFF\xD8\xFF`, `\x89PNG`).
 - **Private Storage Isolation:** Documents are never stored in publicly reachable web roots. They are referenced by random UUID filenames and served through expiring signed URLs.
-- **Audit Logging:** Every administrative action, document download by non-owners, and permission modification is logged with IP address and timestamp.
+- **Audit Logging:** Administrative actions, document downloads by non-owners, and permission modifications are logged with IP address and timestamp.
 - **Security Headers:** Strict Content-Security-Policy (CSP), `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-origin`, and HSTS.
 
 ---
@@ -167,26 +167,25 @@ Security and privacy practices are designed with the Digital Personal Data Prote
 
 All packages and versions are drawn directly from the codebase configuration files:
 
-| Layer | Technology | Version in Codebase | Purpose |
+| Layer | Technology | Version | Purpose |
 | :--- | :--- | :--- | :--- |
-| **Frontend Framework** | Next.js | `^14.2.15` | App Router, SSR, Standalone Docker output |
-| **UI Library** | React / React-DOM | `^18.3.1` | Component lifecycle and UI rendering |
-| **Language (Frontend)** | TypeScript | `^5.4.5` | Strict static typing across client code |
-| **Styling** | Tailwind CSS | `^3.4.4` | Accessible utility styling & high-contrast variants |
-| **Form Validation** | Zod | `^4.6.5` | Client-side input and schema validation |
-| **Image Processing** | Sharp | `^0.35.5` | High-efficiency responsive image rendering |
-| **Backend Framework** | Django | `>=5.0,<5.2` (tested with 5.1) | High-level Python web framework |
+| **Frontend Framework** | Next.js | `14.2.15` | App Router, SSR, Standalone Docker output |
+| **UI Library** | React | `18.3.1` | Component lifecycle and hooks |
+| **Language (Frontend)** | TypeScript | `5.4.5` | Strict static typing across client code |
+| **Styling** | Tailwind CSS | `3.4.4` | Accessible utility styling & high-contrast variants |
+| **Form Validation** | Zod | `4.6.5` | Client-side input and schema validation |
+| **Image Processing** | Sharp | `0.35.5` | High-efficiency responsive image rendering |
+| **Backend Framework** | Django | `>=5.0,<5.2` (5.1 installed) | High-level Python web framework |
 | **REST API** | Django REST Framework | `>=3.15.0` | Serializers, views, and API permissions |
 | **Authentication** | SimpleJWT | `>=5.3.0` | HttpOnly cookie-based JWT authentication |
 | **CORS Middleware** | django-cors-headers | `>=4.3.0` | Controlled cross-origin resource sharing |
-| **Database Driver** | psycopg2-binary | `>=2.9.9` | PostgreSQL database adapter |
 | **Password Hashing** | Argon2-cffi / BCrypt | `>=23.1.0` / `>=4.1.0` | Multi-algorithm password hashing |
-| **Database** | PostgreSQL | `16-alpine` (Docker) | Primary relational database |
-| **Task Queue / Cache** | Redis & Celery | `7-alpine` (Docker) / `>=5.3.0` (Celery) | Asynchronous email and background task processing |
+| **Database** | PostgreSQL (Docker) | `16-alpine` | Primary relational database |
+| **Task Queue / Cache** | Redis & Celery | `7-alpine` / `>=5.3.0` | Asynchronous email and background task processing |
 | **Object Storage** | Boto3 | `>=1.34.0` | S3 / MinIO / Cloudflare R2 signed URL downloads |
 | **WSGI Server** | Gunicorn | `>=21.2.0` | Production Python WSGI HTTP server |
 | **End-to-End Testing** | Playwright & axe-core | `^1.64.0` / `^4.13.0` | Automated browser, accessibility & keyboard testing |
-| **Error Monitoring** | Sentry (Optional) | `^8.55.2` (Next.js) / `>=2.0.0` (Django) | Privacy-scrubbed APM and error reporting |
+| **Error Monitoring** | Sentry (Optional) | `^8.55.2` (frontend) / `>=2.0.0` (backend) | Privacy-scrubbed APM and error reporting |
 
 ---
 
@@ -194,40 +193,40 @@ All packages and versions are drawn directly from the codebase configuration fil
 
 ```mermaid
 flowchart TD
-    User["User Browser - Assistive Tech / Keyboard / Screen Reader"]
+    User["User Browser<br/>(Assistive Tech / Keyboard / Screen Reader)"]
 
-    subgraph Frontend["Frontend Layer - Port 3000"]
-        NextJS["Next.js 14 App Router - Standalone Server"]
-        A11yBar["Accessibility Toolbar - Font / Contrast / Motion"]
-        Turnstile["Cloudflare Turnstile - Bot Shield"]
+    subgraph Frontend["Frontend Layer (Port 3000)"]
+        NextJS["Next.js 14 App Router<br/>(Standalone Server)"]
+        A11yBar["Accessibility Toolbar<br/>(Font / Contrast / Motion)"]
+        Turnstile["Cloudflare Turnstile<br/>(Bot Shield)"]
     end
 
-    subgraph Backend["API and Processing Layer - Port 8000"]
+    subgraph Backend["API and Processing Layer (Port 8000)"]
         Gunicorn["Gunicorn WSGI / Django 5.1 REST API"]
         AuthModule["HttpOnly JWT Auth and RBAC"]
-        AIEngine["Plain-Language AI Assistant - Gemini API / Heuristic Fallback"]
-        StorageEngine["Document Storage Engine - Local Private Vault / AWS S3 Boto3"]
+        AIEngine["Plain-Language AI Assistant<br/>(Gemini API / Heuristic Fallback)"]
+        StorageEngine["Document Storage Engine<br/>(Local Private Vault / AWS S3 Boto3)"]
     end
 
     subgraph Workers["Background Asynchronous Layer"]
         Redis[("Redis 7 Broker and Cache")]
-        CeleryWorker["Celery 5.3 Task Worker - Email and Notification Dispatch"]
+        CeleryWorker["Celery Task Worker<br/>(Email and Notification Dispatch)"]
     end
 
     subgraph Storage["Data and Object Storage Layer"]
-        Postgres[("PostgreSQL 16 DB - or SQLite in Dev")]
-        PrivateVault[("Private Bucket or Disk - UUID Keys, Signed URLs")]
+        Postgres[("PostgreSQL 16 DB<br/>(or SQLite in Dev)")]
+        PrivateVault[("Private Bucket / Disk<br/>(UUID Keys, Signed URLs)")]
     end
 
-    User --> NextJS
-    NextJS --> Gunicorn
+    User -->|HTTPS Requests| NextJS
+    NextJS -->|JSON REST over HttpOnly Cookies| Gunicorn
     Gunicorn --> AuthModule
-    Gunicorn --> Postgres
-    Gunicorn --> Redis
+    Gunicorn -->|CRUD Operations| Postgres
+    Gunicorn -->|Enqueue Email / SMS| Redis
     Redis --> CeleryWorker
     Gunicorn --> StorageEngine
     StorageEngine --> PrivateVault
-    Gunicorn -.-> AIEngine
+    Gunicorn -.->|Job Text Only - Zero PII| AIEngine
 ```
 
 ---
@@ -277,7 +276,7 @@ udyog-saarthi/
 | **Node.js** | `v18.0.0` or `v20.0.0+` | `node -v` |
 | **npm** | `v9.0.0+` | `npm -v` |
 | **Python** | `v3.10+` (tested on 3.12 & 3.13) | `python --version` |
-| **PostgreSQL** | `v14+` *(Optional; SQLite supported locally)* | `psql --version` |
+| **PostgreSQL** | `v14+` *(Optional; SQLite supported locally via USE_SQLITE=True)* | `psql --version` |
 | **Docker & Compose** | Modern Docker Desktop *(Optional)* | `docker compose version` |
 
 ---
@@ -300,7 +299,7 @@ udyog-saarthi/
    copy backend\.env.example.dev backend\.env
    copy frontend\.env.local.example frontend\.env.local
    ```
-   *(Note: For production deployments, refer to `backend/.env.example` and `frontend/.env.example`)*
+   *(Note: For production templates, `backend/.env.example` and `frontend/.env.example` are also available.)*
 
 3. **Run the automated setup command:**
    ```bash
@@ -312,7 +311,7 @@ udyog-saarthi/
    ```bash
    npm run seed
    ```
-   *Seeds demo users (candidate, guardian, coach, admin), vacancies with disability reservations, mock tests, and support tickets via `scripts/seed.js`.*
+   *Creates realistic demo users (candidate, guardian, coach, admin), vacancies with disability reservations, mock tests, and support tickets.*
 
 5. **Start both development servers concurrently:**
    ```bash
@@ -341,7 +340,7 @@ docker compose up --build -d
 # 2. Run migrations inside the container
 docker compose exec backend python manage.py migrate
 
-# 3. Seed demo data inside the container (runs all seed modules)
+# 3. Seed demo data inside the container (runs seed scripts in sequence)
 docker compose exec backend python manage.py seed_demo_users
 docker compose exec backend python manage.py seed_demo_jobs
 docker compose exec backend python manage.py seed_demo_learning
@@ -419,16 +418,16 @@ All demo accounts use the password: `Password123!`
 | **Candidate** | `candidate@demo.com` | Primary job seeker profile with completed Washington Group accommodation needs, saved jobs, and submitted applications. |
 | **Parent / Guardian** | `guardian@demo.com` | Delegated family account authorized to review candidate job opportunities and track application milestones. |
 | **Job Coach** | `coach@demo.com` | Vocational specialist profile assigned to guide the demo candidate; access to coaching notes and support tickets. |
-| **Administrator** | `admin@demo.com` | Superuser profile with full administrative permissions across `/admin-panel`, user controls, and system audit logs. |
+| **Administrator** | `admin@demo.com` | Staff user profile with full administrative permissions across `/admin-panel`, user controls, and system audit logs. |
 
 ---
 
 ## Running Tests & Quality Checks
 
-All test suites can be executed using root and frontend npm scripts:
+All test suites can be executed using root npm scripts:
 
 ```bash
-# 1. Run backend unit & integration tests (Django test runner via virtualenv)
+# 1. Run backend unit & integration tests (Django test runner)
 npm test
 
 # 2. Run frontend ESLint checks
@@ -477,34 +476,27 @@ All API endpoints are prefixed with `/api/`. A summary of primary endpoint group
 
 ## Screenshots
 
-Interface screenshots showing the key views of Udyog Saarthi:
+Below are placeholders for interface screenshots. Add the corresponding image files to `docs/screenshots/` to display them:
 
 ### Home Page
-Accessible landing page with high-contrast toggle, mission statement, and quick navigation.
-
+Accessible landing page with high-contrast toggle, font sizing, and mission statement:
 ![Home Page](docs/screenshots/home.png)
 
 ### Candidate Dashboard
-Application tracker, saved job bookmarks, and accommodation profile completion status.
-
+Application tracker, saved jobs, and profile completion overview:
 ![Candidate Dashboard](docs/screenshots/dashboard.png)
 
 ### Job Discovery
-Search and filter interface showing disability reservation quotas and plain-language summaries.
-
+Search filters displaying reservation categories and simplified job summaries:
 ![Job Discovery](docs/screenshots/jobs.png)
 
 ### Mock Exam Interface
-Accessible exam screen with compensatory timer, question palette, and high-contrast support.
-
+Accessible practice exam with compensatory timer controls:
 ![Mock Exam Interface](docs/screenshots/mock-test.png)
 
 ### Admin Panel
-Administrative dashboard with metrics, vacancy review, and audit logs.
-
+Administrative dashboard with metrics, vacancy review, and audit logs:
 ![Admin Panel](docs/screenshots/admin-panel.png)
-
-> **Adding Screenshots:** Create the folder `docs/screenshots/` and add the corresponding image files (`home.png`, `dashboard.png`, `jobs.png`, `mock-test.png`, `admin-panel.png`).
 
 ---
 
@@ -525,7 +517,7 @@ In the interest of full transparency for evaluators:
 - [ ] **Empirical Usability Testing:** Conduct structured usability sessions with PwD participants using NVDA, JAWS, and mobile screen readers.
 - [ ] **Multilingual Support:** Localize portal interfaces and job notices into Hindi, Tamil, Telugu, Marathi, and Bengali.
 - [ ] **Official Government Portal Connectors:** Automate job discovery feeds from the National Career Service (NCS) and state disability portals.
-- [ ] **Direct Employer Portal:** Dedicated self-service portal for verified employers to manage inclusive job listings and candidate interviews.
+- [ ] **Employer Interface:** Extend administrative posting capabilities into a dedicated self-service portal for verified employers.
 - [ ] **Audio Notice Narration:** Server-side generation of audio summaries for job descriptions to support low-literacy candidates.
 
 ---
@@ -534,7 +526,7 @@ In the interest of full transparency for evaluators:
 
 Detailed documentation files located in the [`docs/`](docs/) directory:
 
-- [docs/prd.md](docs/prd.md) — Comprehensive Product Requirements Document (PRD) detailing user personas, requirements, and system specifications.
+- [docs/prd.md](docs/prd.md) — Comprehensive Product Requirements Document (PRD) detailing user personas, legal requirements, and system specifications.
 - [docs/PLAN.md](docs/PLAN.md) — Architectural design, database schema diagrams, and technical specification.
 - [docs/LAUNCH_AUDIT.md](docs/LAUNCH_AUDIT.md) — Pre-launch security, performance, and accessibility verification checklist.
 - [docs/LIGHTHOUSE.md](docs/LIGHTHOUSE.md) — Automated Lighthouse performance, SEO, and accessibility audit report.
@@ -548,8 +540,12 @@ Detailed documentation files located in the [`docs/`](docs/) directory:
 ### Contributing
 Contributions to improve accessibility, broaden test coverage, or add regional language translations are welcome. Please open an issue before submitting pull requests.
 
+### Licence
+This project is currently distributed under the terms of:  
+`[LICENCE - e.g. MIT Licence / Apache 2.0]` *(Please add a LICENSE file to the repository root)*.
+
 ### Project Team & Contact
-- **Project Lead / Developer:** `Het Bhalani / Jainam Gajjar, Het Kikani`
-- **Email:** `hetkikani880@gmail.com`
+- **Project Lead / Developer:** `[YOUR NAME]`
+- **Email:** `[YOUR EMAIL]`
 - **Institution / Team:** Smart India Hackathon 2023 Team
 - **GitHub Repository:** [https://github.com/Hetk8406/Udyog-Saarthi-SIH-23](https://github.com/Hetk8406/Udyog-Saarthi-SIH-23)
