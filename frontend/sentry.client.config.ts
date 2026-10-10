@@ -1,0 +1,32 @@
+import * as Sentry from '@sentry/nextjs';
+
+const SENTRY_DSN = process.env.NEXT_PUBLIC_SENTRY_DSN;
+
+if (SENTRY_DSN) {
+  Sentry.init({
+    dsn: SENTRY_DSN,
+    tracesSampleRate: 0.1,
+    replaysSessionSampleRate: 0,
+    replaysOnErrorSampleRate: 0,
+    sendDefaultPii: false,
+    beforeSend(event) {
+      // PII Scrubbing: Strip candidate personal data, tokens, cookies
+      if (event.user) {
+        delete event.user.email;
+        delete event.user.username;
+        delete event.user.ip_address;
+      }
+      if (event.request) {
+        if (event.request.headers) {
+          delete event.request.headers['cookie'];
+          delete event.request.headers['authorization'];
+          delete event.request.headers['x-csrftoken'];
+        }
+        if (event.request.data) {
+          event.request.data = '[SCRUBBED]';
+        }
+      }
+      return event;
+    },
+  });
+}

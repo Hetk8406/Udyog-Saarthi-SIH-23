@@ -1,0 +1,13 @@
+problem number 1333
+
+
+work discription:- Coach programme, an introduction to job support services, with support for application, training for competitive examination in an accessible manner, guidance to the PSUs and Department for accessible conduct of competitive examinations, counselling, and logistic support for candidates to write / attend the examination and interview thereafter
+
+problems:- (Persons with disabilities of type, Intellectual Disability, Autism Spectrum Disorder, Multiple Disabilities, Mental Illness, and Specific Learning Disabilities) 
+
+
+supporing entities:- The Department of Empowerment of Persons with Disabilities (DEPwD), National Institutions like NIEPMD,
+
+
+Expected Solution: The software application intends to Ãƒâ€šÃ‚Â· Create a learning profile of the candidates (The learning profile includes persons information with UDID, literacy, skills training, address, functional difficulties faced (as per Washington Group Extended Set Questions), assistive devices/solutions used or required, human assistance requirements, aspiration profile). Ãƒâ€šÃ‚Â· Provide information in an accessible manner to the candidates / parents for various opportunities happening as per 4% reservation in Government and PSUs. Ãƒâ€šÃ‚Â· Additionally, inform jobs as per equal opportunity policies happening in private sector. Ãƒâ€šÃ‚Â· Notification on important dates related to jobs application, examination, and interview. Ãƒâ€šÃ‚Â· Support for model question paper, practice, and mock tests before qualifying examinations. Ãƒâ€šÃ‚Â· Tracking for applied, examination attended, interview qualified and placement. 
+

@@ -1,0 +1,22 @@
+# Dependabot configuration for Udyog Saarthi
+version: 2
+updates:
+  # Keep Python backend dependencies up-to-date
+  - package-ecosystem: "pip"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "backend"
+
+  # Keep Node.js frontend dependencies up-to-date
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "frontend"

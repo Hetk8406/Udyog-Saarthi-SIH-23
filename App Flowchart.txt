@@ -1,0 +1,102 @@
+Start
+|
+V
+User Opens Udyog Sarthi App
+|
+V
+User Chooses to:
+   - Create/Update Profile (Go to Profile)
+   - Browse Job Listings (Go to Job Listings)
+   - Explore Learning Resources (Go to Learning Resources)
+   - Check Notifications (Go to Notifications)
+   - Access Support/Assistance (Go to Support)
+   - Read Success Stories (Go to Success Stories)
+   - Provide Feedback (Go to Feedback)
+   - Logout (End)
+|
+V
+Profile
+|
+V
+User Creates/Updates Profile
+|
+V
+User Returns to Main Menu
+|
+V
+Job Listings
+|
+V
+User Filters/Searches for Jobs
+|
+V
+User Selects a Job Listing
+|
+V
+User Views Job Details
+|
+V
+User Applies for Job
+|
+V
+User Returns to Job Listings or Main Menu
+|
+V
+Learning Resources
+|
+V
+User Accesses Model Question Papers
+|
+V
+User Takes Mock Tests or Practices
+|
+V
+User Views Educational Content
+|
+V
+User Returns to Main Menu
+|
+V
+Notifications
+|
+V
+User Checks Important Dates
+|
+V
+User Manages Notification Preferences
+|
+V
+User Returns to Main Menu
+|
+V
+Support
+|
+V
+User Contacts Support/Assistance
+|
+V
+User Receives Help or Guidance
+|
+V
+User Returns to Main Menu
+|
+V
+Success Stories
+|
+V
+User Reads Real-Life Success Stories
+|
+V
+User Returns to Main Menu
+|
+V
+Feedback
+|
+V
+User Provides Feedback
+|
+V
+User Returns to Main Menu
+|
+V
+End

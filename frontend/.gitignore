@@ -1,0 +1,19 @@
+# Node & Next.js environment and artifacts
+.env
+.env.*
+.env.local
+.env.*.local
+!.env.example
+!.env.local.example
+node_modules/
+.next/
+out/
+build/
+.npm/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+lh-results/

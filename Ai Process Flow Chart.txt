@@ -1,0 +1,39 @@
+Start
+|
+|--- User initiates the application
+|    |
+|    |---> User Interface (UI) displays
+|         |
+|         |---> User selects the type of legal document needed
+|              |
+|              |---> User provides relevant information
+|              |    |
+|              |    |---> AI analyzes user input
+|              |    |    |
+|              |    |    |---> AI generates a draft document
+|              |    |    |
+|              |    |---> User customizes the document
+|              |    |
+|              |    |---> AI updates the document based on user customization
+|              |
+|              |---> User reviews the generated document
+|                   |
+|                   |---> Is the document acceptable?
+|                        |
+|                        |---> Yes: Proceed to the next step
+|                        |
+|                        |---> No: Return to customization
+|
+|--- Document is finalized
+|    |
+|    |---> AI checks for legal compliance
+|    |    |
+|    |    |---> Is the document legally sound?
+|    |         |
+|    |         |---> Yes: Proceed to the next step
+|    |         |
+|    |         |---> No: Prompt user to seek legal advice
+|    |
+|    |---> Document is saved and ready for download/printing
+|
+|--- End

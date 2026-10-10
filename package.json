@@ -1,0 +1,21 @@
+{
+  "name": "udyog-saarthi",
+  "version": "1.0.0",
+  "description": "Accessible Career & Learning Portal for Persons with Disabilities (PwD)",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/check-env.js && concurrently --kill-others --prefix \"[{name}]\" --names \"api,web\" --prefix-colors \"blue.bold,magenta.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "node scripts/run-python.js backend/manage.py runserver 8000",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "setup": "node scripts/setup.js",
+    "seed": "node scripts/seed.js",
+    "test": "node scripts/run-python.js backend/manage.py test accounts admin_panel ai_assistant applications core jobs learning notifications profiles support",
+    "db:e2e": "node scripts/setup-e2e-db.js",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.64.0",
+    "concurrently": "^8.2.2"
+  }
+}

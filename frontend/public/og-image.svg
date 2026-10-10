@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogGradient)"/>
+
+  <!-- Decorative Accent Grid / Ring Elements -->
+  <circle cx="1050" cy="150" r="280" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="8 8" opacity="0.3"/>
+  <circle cx="1050" cy="150" r="180" fill="none" stroke="#60a5fa" stroke-width="2" opacity="0.2"/>
+
+  <!-- Top Badge -->
+  <g transform="translate(100, 110)">
+    <rect width="360" height="42" rx="21" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="24" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#facc15" letter-spacing="1">
+      SMART INDIA HACKATHON 2023
+    </text>
+  </g>
+
+  <!-- Logo Emblem and Platform Title -->
+  <g transform="translate(100, 190)">
+    <!-- App Emblem -->
+    <rect width="84" height="84" rx="20" fill="#2563eb"/>
+    <text x="42" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="middle">
+      US
+    </text>
+    
+    <!-- Title Text -->
+    <text x="110" y="62" font-family="system-ui, -apple-system, sans-serif" font-size="68" font-weight="900" fill="#ffffff" letter-spacing="-1">
+      Udyog Saarthi
+    </text>
+  </g>
+
+  <!-- Tagline & Core Mission -->
+  <g transform="translate(100, 330)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700" fill="#93c5fd" letter-spacing="-0.5">
+      Empowering Every Ability
+    </text>
+    <text x="0" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#cbd5e1" width="800">
+      Accessible Employment &amp; Examination Preparation Platform for Persons with Disabilities
+    </text>
+  </g>
+
+  <!-- Feature Pills -->
+  <g transform="translate(100, 470)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="220" height="46" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="110" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f8fafc" text-anchor="middle">
+      ♿ Accessible Jobs
+    </text>
+
+    <!-- Pill 2 -->
+    <rect x="240" y="0" width="230" height="46" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="355" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f8fafc" text-anchor="middle">
+      📝 Mock Examinations
+    </text>
+
+    <!-- Pill 3 -->
+    <rect x="490" y="0" width="230" height="46" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="605" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f8fafc" text-anchor="middle">
+      🤝 Dedicated Coaching
+    </text>
+
+    <!-- Pill 4 -->
+    <rect x="740" y="0" width="240" height="46" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="860" y="29" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#f8fafc" text-anchor="middle">
+      ⚖ DPDP Act Compliant
+    </text>
+  </g>
+
+  <!-- Bottom Domain URL -->
+  <text x="100" y="580" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#64748b">
+    udyogsaarthi.in
+  </text>
+</svg>

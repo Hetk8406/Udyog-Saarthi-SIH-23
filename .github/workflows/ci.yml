@@ -1,0 +1,218 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ============================================================================
+  # Backend Testing & Migrations Check
+  # ============================================================================
+  backend:
+    name: Backend (Python & Django)
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: udyog_saarthi_test
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      SECRET_KEY: 'ci-temporary-fake-secret-key-minimum-50-characters-long-for-testing'
+      DEBUG: 'False'
+      USE_SQLITE: 'False'
+      DB_NAME: 'udyog_saarthi_test'
+      DB_USER: 'test_user'
+      DB_PASSWORD: 'test_password'
+      DB_HOST: 'localhost'
+      DB_PORT: '5432'
+      ALLOW_DEMO_SEED: 'False'
+      COOKIE_SECURE: 'False'
+      COOKIE_SAMESITE: 'Lax'
+      USE_S3_STORAGE: 'False'
+      TURNSTILE_SECRET_KEY: '1x0000000000000000000000000000000AA'
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Verify migration consistency
+        run: |
+          python backend/manage.py makemigrations --check --dry-run
+
+      - name: Run test suite
+        run: |
+          python backend/manage.py test backend/
+
+  # ============================================================================
+  # Frontend Linting, Type Checking & Production Build
+  # ============================================================================
+  frontend:
+    name: Frontend (Next.js & TypeScript)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+
+    env:
+      NEXT_PUBLIC_API_URL: 'http://localhost:8000/api'
+      NEXT_TELEMETRY_DISABLED: 1
+      NODE_ENV: production
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run TypeScript type check
+        run: npm run typecheck
+
+      - name: Build Next.js production bundle
+        run: npm run build
+
+  # ============================================================================
+  # Security Scans: Gitleaks & Dependency Audits
+  # ============================================================================
+  security:
+    name: Security Audits & Secret Scanning
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gitleaks Secret Scanner
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Audit Backend Dependencies (pip-audit)
+        run: |
+          python -m pip install --upgrade pip pip-audit
+          pip-audit -r backend/requirements.txt --desc || true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Audit Frontend Dependencies (npm audit - high/critical)
+        run: |
+          npm --prefix frontend audit --audit-level=high || true
+
+  # ============================================================================
+  # End-to-End Testing (Playwright & axe-core)
+  # ============================================================================
+  e2e:
+    name: End-to-End Tests (Playwright)
+    runs-on: ubuntu-latest
+    needs: [backend, frontend]
+
+    env:
+      SECRET_KEY: 'ci-temporary-fake-secret-key-minimum-50-characters-long-for-testing'
+      DEBUG: 'True'
+      TESTING: 'True'
+      USE_SQLITE: 'True'
+      SQLITE_DB_NAME: 'test_e2e.sqlite3'
+      ALLOWED_HOSTS: 'localhost,127.0.0.1'
+      COOKIE_SECURE: 'False'
+      COOKIE_SAMESITE: 'Lax'
+      NEXT_PUBLIC_API_URL: 'http://localhost:8000/api'
+      TURNSTILE_SECRET_KEY: '1x0000000000000000000000000000000AA'
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Create Python venv and install dependencies
+        run: |
+          python -m venv backend/.venv
+          backend/.venv/bin/pip install --upgrade pip
+          backend/.venv/bin/pip install -r backend/requirements.txt
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install root and frontend npm dependencies
+        run: |
+          npm ci || npm install
+          npm --prefix frontend ci || npm --prefix frontend install
+
+      - name: Install Playwright Browsers & OS Dependencies
+        run: |
+          npx playwright install --with-deps chromium
+
+      - name: Run Playwright E2E Tests
+        run: |
+          npm run test:e2e
+
+      - name: Upload Playwright Test Report and Failure Artifacts
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-failure-artifacts
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14

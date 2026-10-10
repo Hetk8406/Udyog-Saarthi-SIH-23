@@ -1,0 +1,42 @@
+# ==============================================================================
+# Docker Compose Development Override Example
+# ==============================================================================
+# Copy this file to docker-compose.override.yml to enable live reload and
+# local debugging without rebuilding Docker images on code changes:
+#
+#   cp docker-compose.override.example.yml docker-compose.override.yml
+#   docker compose up
+# ==============================================================================
+
+version: '3.8'
+
+services:
+  # Enable Django auto-reload by mounting backend source code and running runserver
+  backend:
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    volumes:
+      - ./backend:/app
+      - media_data:/app/media
+      - private_storage_data:/app/private_storage
+    environment:
+      DEBUG: "True"
+      ALLOW_DEMO_SEED: "True"
+
+  # Mount backend source into Celery worker for live updates
+  celery_worker:
+    volumes:
+      - ./backend:/app
+      - media_data:/app/media
+      - private_storage_data:/app/private_storage
+    environment:
+      DEBUG: "True"
+
+  # Enable Next.js hot-module reloading in development mode
+  frontend:
+    command: ["npm", "run", "dev"]
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      NODE_ENV: "development"

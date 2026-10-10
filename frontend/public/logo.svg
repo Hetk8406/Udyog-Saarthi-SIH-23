@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 54" width="240" height="54" fill="none" role="img" aria-label="Udyog Saarthi Logo">
+  <!-- Icon Emblem -->
+  <g transform="translate(4, 3)">
+    <rect width="48" height="48" rx="12" fill="url(#blueGradient)" />
+    <!-- Golden sun / head -->
+    <circle cx="24" cy="14" r="5" fill="#FBBF24" />
+    <!-- Torch / body symbolizing employment enablement -->
+    <path d="M16 22h16v5h-5v13h-6V27h-5z" fill="#FFFFFF" />
+    <!-- Upward curved arc of inclusion -->
+    <path d="M16 33c2.5 4 7 6.5 12.5 6.5s10-2.5 12.5-6.5" stroke="#FBBF24" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Brand Typography (for light backgrounds) -->
+  <text x="62" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="20" font-weight="800" fill="#1E3A8A" letter-spacing="-0.5">
+    Udyog Saarthi
+  </text>
+  <text x="62" y="43" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="10.5" font-weight="600" fill="#64748B" letter-spacing="0.3">
+    Empowering Every Ability
+  </text>
+
+  <defs>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+  </defs>
+</svg>
