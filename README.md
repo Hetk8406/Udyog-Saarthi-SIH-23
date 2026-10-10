@@ -2,7 +2,7 @@
 
 > **An Accessible Employment and Career Preparation Platform for Persons with Disabilities (PwD)**  
 > Built for **Smart India Hackathon (SIH 2023)** | **Problem Statement SIH-1333**  
-> Aligned with the **Rights of Persons with Disabilities (RPwD) Act 2016** and the **Digital Personal Data Protection (DPDP) Act 2023**.
+> Designed with the **Rights of Persons with Disabilities (RPwD) Act 2016** and the **Digital Personal Data Protection (DPDP) Act 2023** in mind.
 
 [![CI Pipeline](https://github.com/Hetk8406/Udyog-Saarthi-SIH-23/actions/workflows/ci.yml/badge.svg)](https://github.com/Hetk8406/Udyog-Saarthi-SIH-23/actions/workflows/ci.yml)
 [![Next.js 14](https://img.shields.io/badge/Next.js-14.2.15-black?style=flat&logo=next.js)](https://nextjs.org/)
@@ -38,19 +38,19 @@
 ## About the Project
 
 ### The Problem
-Finding meaningful employment remains an uphill struggle for Persons with Disabilities (PwD) across India, particularly individuals with neurodivergent conditions, intellectual disabilities, autism spectrum disorders, mental illness, or multiple disabilities. Government and Public Sector Undertaking (PSU) job notifications are often dense, multi-page PDFs with difficult language, obscure reservation breakdowns (such as the mandatory 4% reservation under Section 34 of the RPwD Act 2016), and inaccessible application gateways. Furthermore, candidates rarely receive reasonable accommodations during preparatory examinations or structured guidance from specialized job coaches.
+Finding meaningful employment remains an uphill struggle for Persons with Disabilities (PwD) across India, particularly individuals with neurodivergent conditions, intellectual disabilities, autism spectrum disorders, mental illness, or multiple disabilities. Government and Public Sector Undertaking (PSU) job notifications are often dense, multi-page PDFs with complex legalistic language, obscure reservation breakdowns (such as the 4% reservation under Section 34 of the RPwD Act 2016), and inaccessible application gateways. Furthermore, candidates often lack preparatory support with compensatory examination accommodations or structured guidance from dedicated job coaches.
 
 ### Who It Is For
-- **Candidates with Disabilities:** Job seekers across all 21 categories recognized by the RPwD Act 2016, with accommodations for locomotor, visual, hearing, intellectual, and neurodivergent conditions.
+- **Candidates with Disabilities:** Job seekers across disability categories recognized under the RPwD Act 2016, with accessibility accommodations for locomotor, visual, hearing, intellectual, and neurodivergent conditions.
 - **Parents and Guardians:** Authorized family members who can review opportunities, manage documents, and follow up on applications with explicit candidate consent.
 - **Job Coaches & Counsellors:** Vocational experts who review candidate barriers, formulate personalized guidance notes, and suggest suitable openings.
-- **Employers & System Administrators:** Government agencies, PSUs, and inclusive private employers who post vacancies and monitor employment pipelines.
+- **Administrators:** Platform staff who manage job postings, review applications, oversee coach assignments, and monitor platform metrics.
 
 ### What It Does
 Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme & Job Support Services)**, Udyog Saarthi provides an end-to-end accessible career ecosystem:
 1. Translates intricate job notices into plain, accessible summaries.
 2. Identifies matching vacancies based on disability reservation quotas and personal functional profiles.
-3. Provides mock tests with government-mandated compensatory time accommodations.
+3. Provides mock tests with compensatory time accommodations.
 4. Connects candidates with assigned coaches and supports authorized guardian delegation.
 
 ---
@@ -60,24 +60,24 @@ Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme 
 ```
 ┌─────────────────┐     ┌──────────────────────┐     ┌────────────────────────┐
 │  1. Onboarding  │ ──> │ 2. Profile & Needs   │ ──> │ 3. Job Discovery       │
-│ Register & consent    │ Complete functional  │     │ Search 4% reservations │
-│ to DPDP notice  │     │ Washington Group Qs  │     │ & private openings     │
+│ Register & review     │ Complete functional  │     │ Search 4% reservations │
+│ privacy notice  │     │ Washington Group Qs  │     │ & private openings     │
 └─────────────────┘     └──────────────────────┘     └────────────────────────┘
                                                                   │
                                                                   ▼
 ┌─────────────────┐     ┌──────────────────────┐     ┌────────────────────────┐
 │ 6. Placed!      │ <── │ 5. Learn & Prepare   │ <── │ 4. Apply & Track       │
 │ Onboarding &    │     │ Take compensatory    │     │ Upload documents &     │
-│ workplace audit │     │ mock tests & courses │     │ track status timeline  │
+│ coach support   │     │ mock tests & courses │     │ track status timeline  │
 └─────────────────┘     └──────────────────────┘     └────────────────────────┘
 ```
 
-1. **"I want a job":** Candidate signs up securely, acknowledges clear consent under the DPDP Act 2023, and logs in.
+1. **"I want a job":** Candidate signs up securely, reviews the privacy and consent notice, and logs in.
 2. **Build an Accommodation Profile:** Candidate documents their qualifications, functional needs using the Washington Group Extended Set questions, assistive devices, and exam requirements (e.g., scribe, extra time).
 3. **Discover Verified Jobs:** Portal filters vacancies across Central/State Government, PSUs, and private equal-opportunity employers by specific reservation categories.
-4. **Apply & Upload Documents:** Candidate attaches their resume and certificates using private, virus-checked storage with signed download URLs.
+4. **Apply & Upload Documents:** Candidate attaches their resume and certificates using private storage with signed download URLs.
 5. **Practice with Accommodations:** Candidate takes accessible mock exams with automatic compensatory time (+20 minutes/hour) or untimed modes, reviewing detailed answer explanations.
-6. **Coaching & Placement:** Assigned job coaches provide guidance through support tickets, track application stages, and celebrate successful job placement.
+6. **Coaching & Placement:** Assigned job coaches provide guidance through support tickets, track application stages, and support candidates through examination and placement.
 
 ---
 
@@ -92,40 +92,40 @@ Built for **Smart India Hackathon 2023 (Problem Statement 1333: Coach Programme 
 
 ### Job Discovery & Reservation Matching
 - **Sector Filtering:** Search government vacancies, PSUs, and private inclusive employers by location, salary, experience, and specific disability quota.
-- **Plain-Language Explanations:** Explains legal eligibility terms, medical requirements, and physical suitability standards.
+- **Plain-Language Explanations:** Explains eligibility terms, qualification requirements, and physical suitability standards.
 
 ### Application Tracking & Timelines
-- **Multi-Stage Visual Timeline:** Tracks applications through *Submitted*, *Under Review*, *Shortlisted*, *Interview Scheduled*, *Rejected*, and *Offered*.
-- **External Redirect Support:** Tracks applications submitted through external government portals (e.g., UPSC, SSC, state PSCs) alongside internal applications.
+- **Status Timeline:** Tracks applications through real pipeline stages: *Saved*, *Application Started*, *Applied*, *Application Submitted*, *Admit Card Released*, *Exam Scheduled*, *Exam Attended*, *Result Published*, *Interview Scheduled*, *Interview Attended*, *Selected*, *Placed* (with terminal states: *Rejected*, *Withdrawn*, *Expired*).
+- **External Redirect Support:** Tracks applications submitted through external official recruitment portals (e.g., UPSC, SSC, state PSCs) alongside internal applications.
 
 ### Secure Document Vault
 - **Private File Storage:** Accepts resumes and educational certificates (PDF, DOCX, PNG, JPG) up to 5 MB with strict magic-byte validation.
 - **Expiring Signed URLs:** Documents are stored under random UUID keys and downloaded only via 5-minute signed URLs after permission checks.
 
 ### Accessible Learning & Mock Test Engine
-- **Compensatory Time Allocations:** Automatically awards 20 minutes extra per hour in compliance with Ministry of Social Justice guidelines, alongside 1.5x and untimed modes.
-- **Curated Course Library:** Open-access career preparation modules, computer skills courses, and interview preparation materials.
+- **Compensatory Time Allocations:** Supports +20 minutes extra per hour compensatory timing, alongside 1.5x and untimed practice modes.
+- **Curated Course Library:** Career preparation modules, digital literacy courses, and interview preparation materials.
 
 ### Notification Center
 - **In-App & Email Alerts:** Status changes, coach responses, ticket updates, and exam deadlines appear in the notification drawer and deliver via background tasks.
 
 ### Support Desk & Job Coach Workspace
-- **Confidential Ticket System:** Two-way messaging between candidates and coaches for technical assistance, career counselling, and interview scheduling.
+- **Confidential Ticket System:** Two-way messaging between candidates and coaches for technical assistance, career counselling, and interview guidance.
 - **Coach Notes:** Coaches can attach private observations and recommended jobs to candidate records.
 
 ### Guardian Delegation
 - **Granular Consent Controls:** Candidates can authorize guardians to view profile details, track applications, or download documents, with the ability to revoke access at any time.
 
 ### Administrator Command Center
-- **Platform Governance:** Comprehensive metrics, job posting creation, vacancy approval, user role management, and immutable audit logging.
+- **Platform Governance:** Comprehensive metrics, job posting creation, vacancy review, user role management, and audit logging.
 
 ### Explainable AI Helpers (Gemini & Heuristic Engine)
-- **Job Explainer:** Summarizes complex recruitment notices into 6th-grade plain language, highlighting duties, physical suitability, and key deadlines.
+- **Job Explainer:** Summarizes complex recruitment notices into clear, plain language, highlighting core duties, physical suitability, and key deadlines.
 - **Smart Recommendations:** Suggests relevant openings and skill-building courses based on self-reported accommodations without sharing personal data with AI vendors.
 
 ### SEO, Cookie Consent & Compliance
 - **Zero-PII Analytics:** Plausible analytics integration (cookieless and privacy-first).
-- **Compliance Center:** Draft legal notices for DPDP Act 2023, Terms of Service, and an interactive cookie preferences manager.
+- **Compliance Center:** Draft legal notices designed with the DPDP Act 2023 in mind, Terms of Service, and an interactive cookie preferences manager.
 
 ---
 
@@ -149,11 +149,11 @@ Accessibility is built directly into every page rather than added as an aftertho
 
 ## Security & Privacy Architecture
 
-Security and privacy practices follow the Digital Personal Data Protection (DPDP) Act 2023:
+Security and privacy practices are designed with the Digital Personal Data Protection (DPDP) Act 2023 in mind:
 
 - **HttpOnly Cookie Authentication:** JWT tokens are stored exclusively in HttpOnly, SameSite cookies (`access_token` and `refresh_token`), protecting against token theft via XSS.
 - **CSRF Defense:** `django-cors-headers` combined with double-submit CSRF cookie checks (`csrftoken` header) on all state-changing endpoints.
-- **UDID Data Protection:** Disability certificate numbers (UDID) are treated as sensitive health data. They are never transmitted to third parties, AI APIs, or unassigned accounts.
+- **UDID Data Protection:** Disability certificate numbers (UDID) are treated as sensitive data. They are never transmitted to third parties, AI APIs, or unassigned accounts.
 - **Rate Limiting:** Authentication, login, password reset, and upload endpoints enforce throttling (e.g., 5 requests/minute for login) to mitigate credential stuffing and DoS attacks.
 - **Cloudflare Turnstile:** Bot and credential-stuffing defense on login and registration pages; fails closed in production (`DEBUG=False`).
 - **File Upload Validation:** Files are checked against allowed extensions, maximum file sizes (5 MB), and verified binary magic bytes (`%PDF-`, `PK\x03\x04`, `\xFF\xD8\xFF`, `\x89PNG`).
@@ -167,25 +167,26 @@ Security and privacy practices follow the Digital Personal Data Protection (DPDP
 
 All packages and versions are drawn directly from the codebase configuration files:
 
-| Layer | Technology | Version | Purpose |
+| Layer | Technology | Version in Codebase | Purpose |
 | :--- | :--- | :--- | :--- |
-| **Frontend Framework** | Next.js | `14.2.15` | App Router, SSR, Standalone Docker output |
-| **UI Library** | React | `18.3.1` | Component lifecycle and hooks |
-| **Language (Frontend)** | TypeScript | `5.4.5` | Strict static typing across client code |
-| **Styling** | Tailwind CSS | `3.4.4` | Accessible utility styling & high-contrast variants |
-| **Form Validation** | Zod | `4.6.5` | Client-side input and schema validation |
-| **Image Processing** | Sharp | `0.35.5` | High-efficiency responsive image rendering |
-| **Backend Framework** | Django | `5.1.x` (`>=5.0,<5.2`) | High-level Python web framework |
-| **REST API** | Django REST Framework | `3.15.2` (`>=3.15.0`) | Serializers, views, and API permissions |
-| **Authentication** | SimpleJWT | `5.3.1` (`>=5.3.0`) | HttpOnly cookie-based JWT authentication |
-| **CORS Middleware** | django-cors-headers | `4.3.1` (`>=4.3.0`) | Controlled cross-origin resource sharing |
-| **Password Hashing** | Argon2-cffi / BCrypt | `23.1.0` / `4.1.0` | Multi-algorithm password hashing |
-| **Database** | PostgreSQL | `16-alpine` | Primary relational database |
-| **Task Queue / Cache** | Redis & Celery | `7-alpine` / `5.3.6` | Asynchronous email and background task processing |
-| **Object Storage** | Boto3 | `1.34.0` | S3 / MinIO / Cloudflare R2 signed URL downloads |
-| **WSGI Server** | Gunicorn | `21.2.0` | Production Python WSGI HTTP server |
-| **End-to-End Testing** | Playwright & axe-core | `1.64.0` / `4.13.0` | Automated browser, accessibility & keyboard testing |
-| **Error Monitoring** | Sentry (Optional) | `@sentry/nextjs 8.55.2` / `sentry-sdk 2.0.0` | Privacy-scrubbed APM and error reporting |
+| **Frontend Framework** | Next.js | `^14.2.15` | App Router, SSR, Standalone Docker output |
+| **UI Library** | React / React-DOM | `^18.3.1` | Component lifecycle and UI rendering |
+| **Language (Frontend)** | TypeScript | `^5.4.5` | Strict static typing across client code |
+| **Styling** | Tailwind CSS | `^3.4.4` | Accessible utility styling & high-contrast variants |
+| **Form Validation** | Zod | `^4.6.5` | Client-side input and schema validation |
+| **Image Processing** | Sharp | `^0.35.5` | High-efficiency responsive image rendering |
+| **Backend Framework** | Django | `>=5.0,<5.2` (tested with 5.1) | High-level Python web framework |
+| **REST API** | Django REST Framework | `>=3.15.0` | Serializers, views, and API permissions |
+| **Authentication** | SimpleJWT | `>=5.3.0` | HttpOnly cookie-based JWT authentication |
+| **CORS Middleware** | django-cors-headers | `>=4.3.0` | Controlled cross-origin resource sharing |
+| **Database Driver** | psycopg2-binary | `>=2.9.9` | PostgreSQL database adapter |
+| **Password Hashing** | Argon2-cffi / BCrypt | `>=23.1.0` / `>=4.1.0` | Multi-algorithm password hashing |
+| **Database** | PostgreSQL | `16-alpine` (Docker) | Primary relational database |
+| **Task Queue / Cache** | Redis & Celery | `7-alpine` (Docker) / `>=5.3.0` (Celery) | Asynchronous email and background task processing |
+| **Object Storage** | Boto3 | `>=1.34.0` | S3 / MinIO / Cloudflare R2 signed URL downloads |
+| **WSGI Server** | Gunicorn | `>=21.2.0` | Production Python WSGI HTTP server |
+| **End-to-End Testing** | Playwright & axe-core | `^1.64.0` / `^4.13.0` | Automated browser, accessibility & keyboard testing |
+| **Error Monitoring** | Sentry (Optional) | `^8.55.2` (Next.js) / `>=2.0.0` (Django) | Privacy-scrubbed APM and error reporting |
 
 ---
 
@@ -193,40 +194,40 @@ All packages and versions are drawn directly from the codebase configuration fil
 
 ```mermaid
 flowchart TD
-    User["User Browser\n(Assistive Tech / Keyboard / Screen Reader)"]
+    User["User Browser - Assistive Tech / Keyboard / Screen Reader"]
 
-    subgraph Frontend["Frontend Layer (Port 3000)"]
-        NextJS["Next.js 14 App Router\n(Standalone Server)"]
-        A11yBar["Accessibility Toolbar\n(Font / Contrast / Motion)"]
-        Turnstile["Cloudflare Turnstile\n(Bot Shield)"]
+    subgraph Frontend["Frontend Layer - Port 3000"]
+        NextJS["Next.js 14 App Router - Standalone Server"]
+        A11yBar["Accessibility Toolbar - Font / Contrast / Motion"]
+        Turnstile["Cloudflare Turnstile - Bot Shield"]
     end
 
-    subgraph Backend["API & Processing Layer (Port 8000)"]
+    subgraph Backend["API and Processing Layer - Port 8000"]
         Gunicorn["Gunicorn WSGI / Django 5.1 REST API"]
-        AuthModule["HttpOnly JWT Auth & RBAC"]
-        AIEngine["Plain-Language AI Assistant\n(Gemini API / Heuristic Fallback)"]
-        StorageEngine["Document Storage Engine\n(Local Private Vault / AWS S3 Boto3)"]
+        AuthModule["HttpOnly JWT Auth and RBAC"]
+        AIEngine["Plain-Language AI Assistant - Gemini API / Heuristic Fallback"]
+        StorageEngine["Document Storage Engine - Local Private Vault / AWS S3 Boto3"]
     end
 
     subgraph Workers["Background Asynchronous Layer"]
-        Redis[("Redis 7 Broker & Cache")]
-        CeleryWorker["Celery 5.3 Task Worker\n(Email & Notification Dispatch)"]
+        Redis[("Redis 7 Broker and Cache")]
+        CeleryWorker["Celery 5.3 Task Worker - Email and Notification Dispatch"]
     end
 
-    subgraph Storage["Data & Object Storage Layer"]
-        Postgres[("PostgreSQL 16 DB\n(or SQLite in Dev)")]
-        PrivateVault[("Private Bucket / Disk\n(UUID Keys, Signed URLs)")]
+    subgraph Storage["Data and Object Storage Layer"]
+        Postgres[("PostgreSQL 16 DB - or SQLite in Dev")]
+        PrivateVault[("Private Bucket or Disk - UUID Keys, Signed URLs")]
     end
 
-    User -->|HTTPS Requests| NextJS
-    NextJS -->|JSON REST over HttpOnly Cookies| Gunicorn
+    User --> NextJS
+    NextJS --> Gunicorn
     Gunicorn --> AuthModule
-    Gunicorn -->|CRUD Operations| Postgres
-    Gunicorn -->|Enqueue Email / SMS| Redis
+    Gunicorn --> Postgres
+    Gunicorn --> Redis
     Redis --> CeleryWorker
     Gunicorn --> StorageEngine
     StorageEngine --> PrivateVault
-    Gunicorn -.->|Job Text Only (Zero PII)| AIEngine
+    Gunicorn -.-> AIEngine
 ```
 
 ---
@@ -299,6 +300,7 @@ udyog-saarthi/
    copy backend\.env.example.dev backend\.env
    copy frontend\.env.local.example frontend\.env.local
    ```
+   *(Note: For production deployments, refer to `backend/.env.example` and `frontend/.env.example`)*
 
 3. **Run the automated setup command:**
    ```bash
@@ -310,7 +312,7 @@ udyog-saarthi/
    ```bash
    npm run seed
    ```
-   *Creates realistic demo users (candidate, guardian, coach, admin), vacancies with disability reservations, mock tests, and support tickets.*
+   *Seeds demo users (candidate, guardian, coach, admin), vacancies with disability reservations, mock tests, and support tickets via `scripts/seed.js`.*
 
 5. **Start both development servers concurrently:**
    ```bash
@@ -339,8 +341,13 @@ docker compose up --build -d
 # 2. Run migrations inside the container
 docker compose exec backend python manage.py migrate
 
-# 3. Seed demo data inside the container
-docker compose exec backend python manage.py seed_demo_all
+# 3. Seed demo data inside the container (runs all seed modules)
+docker compose exec backend python manage.py seed_demo_users
+docker compose exec backend python manage.py seed_demo_jobs
+docker compose exec backend python manage.py seed_demo_learning
+docker compose exec backend python manage.py seed_demo_notifications
+docker compose exec backend python manage.py seed_demo_support
+docker compose exec backend python manage.py seed_demo_admin_data
 
 # 4. Stop all running containers
 docker compose down
@@ -418,10 +425,10 @@ All demo accounts use the password: `Password123!`
 
 ## Running Tests & Quality Checks
 
-All test suites can be executed using root npm scripts:
+All test suites can be executed using root and frontend npm scripts:
 
 ```bash
-# 1. Run backend unit & integration tests (Django test runner)
+# 1. Run backend unit & integration tests (Django test runner via virtualenv)
 npm test
 
 # 2. Run frontend ESLint checks
@@ -441,7 +448,7 @@ npm run test:e2e
 
 - **Backend Test Suite (`npm test`):** **89 passed / 89 total**  
   *Covers authentication cookies, RBAC permissions, document magic-byte validation, signed URL generation, Turnstile verification, Celery email tasks, and rate limiters.*
-- **Frontend Code Quality (`npm run lint` & `tsc`):** **0 errors / 0 warnings**
+- **Frontend Code Quality (`npm run lint` & `typecheck`):** **0 errors / 0 warnings**
 - **Playwright End-to-End Suite (`npm run test:e2e`):** **31 passed / 31 total**  
   *Covers user registration, application tracking, mock exams, support tickets, admin posting, keyboard-only navigation, mobile 375px viewports, and automated `@axe-core/playwright` accessibility audits across normal and high-contrast modes.*
 
@@ -470,17 +477,34 @@ All API endpoints are prefixed with `/api/`. A summary of primary endpoint group
 
 ## Screenshots
 
-Placeholders for interface screenshots to include when preparing presentations:
+Interface screenshots showing the key views of Udyog Saarthi:
 
-| View | Screenshot Location | Description |
-| :--- | :--- | :--- |
-| **Home Page** | `![Home Page](docs/screenshots/home.png)` | Accessible landing page with high-contrast toggle and mission statement |
-| **Candidate Dashboard** | `![Candidate Dashboard](docs/screenshots/dashboard.png)` | Application tracker, saved jobs, and profile completion checklist |
-| **Job Discovery** | `![Job Discovery](docs/screenshots/jobs.png)` | Search filters showing 4% reservation categories and plain-language summaries |
-| **Mock Exam Interface** | `![Mock Test](docs/screenshots/mock-test.png)` | Accessible test-taking screen with compensatory timer and contrast controls |
-| **Admin Panel** | `![Admin Panel](docs/screenshots/admin-panel.png)` | Administrative dashboard with role management and audit logs |
+### Home Page
+Accessible landing page with high-contrast toggle, mission statement, and quick navigation.
 
-> **To add your screenshots:** Create the directory `docs/screenshots/` and place your image files named `home.png`, `dashboard.png`, `jobs.png`, `mock-test.png`, and `admin-panel.png`.
+![Home Page](docs/screenshots/home.png)
+
+### Candidate Dashboard
+Application tracker, saved job bookmarks, and accommodation profile completion status.
+
+![Candidate Dashboard](docs/screenshots/dashboard.png)
+
+### Job Discovery
+Search and filter interface showing disability reservation quotas and plain-language summaries.
+
+![Job Discovery](docs/screenshots/jobs.png)
+
+### Mock Exam Interface
+Accessible exam screen with compensatory timer, question palette, and high-contrast support.
+
+![Mock Exam Interface](docs/screenshots/mock-test.png)
+
+### Admin Panel
+Administrative dashboard with metrics, vacancy review, and audit logs.
+
+![Admin Panel](docs/screenshots/admin-panel.png)
+
+> **Adding Screenshots:** Create the folder `docs/screenshots/` and add the corresponding image files (`home.png`, `dashboard.png`, `jobs.png`, `mock-test.png`, `admin-panel.png`).
 
 ---
 
@@ -510,7 +534,7 @@ In the interest of full transparency for evaluators:
 
 Detailed documentation files located in the [`docs/`](docs/) directory:
 
-- [docs/prd.md](docs/prd.md) — Comprehensive Product Requirements Document (PRD) detailing user personas, legal requirements, and system specifications.
+- [docs/prd.md](docs/prd.md) — Comprehensive Product Requirements Document (PRD) detailing user personas, requirements, and system specifications.
 - [docs/PLAN.md](docs/PLAN.md) — Architectural design, database schema diagrams, and technical specification.
 - [docs/LAUNCH_AUDIT.md](docs/LAUNCH_AUDIT.md) — Pre-launch security, performance, and accessibility verification checklist.
 - [docs/LIGHTHOUSE.md](docs/LIGHTHOUSE.md) — Automated Lighthouse performance, SEO, and accessibility audit report.
